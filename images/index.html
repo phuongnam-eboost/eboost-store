@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://eboost.vn/wp-content/uploads/2022/07/cropped-Logo-brandmark-32x32.png" sizes="32x32"/>
+<title>Eboost App</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #FBFBFB;
+        padding: 20px;
+    }
+    .logo {
+        width: 400px;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        max-width: 400px;
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        height: 150px;
+        border-radius: 15px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideUp 0.8s forwards;
+    }
+    .button-bike {
+        border: 2px solid #13e86f;
+        animation-delay: 0.2s;
+    }
+    .button-car {
+        border: 2px solid #0fdc5e;
+        animation-delay: 0.4s;
+    }
+    .button-bike:hover,
+    .button-bike:active {
+        background-color: #13e86f;
+        color: #fff;
+        transform: scale(1.05);
+    }
+    .button-car:hover,
+    .button-car:active {
+        background-color: #0fdc5e;
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .text {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    @keyframes slideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (min-width: 600px) {
+        .button-container {
+            flex-direction: row;
+            max-width: 800px;
+            gap: 43px;
+        }
+        .logo {
+            width: 400px;
+        }
+        .button {
+            height: 220px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<object class="logo" type="image/svg+xml" data="images/brand.svg"></object>
+
+<div class="button-container">
+    <button class="button button-car" onclick="location.href='car.html'">
+        <img src="images/car.svg" alt="Car Icon" class="icon">
+        <div class="text">Car</div>
+    </button>
+
+    <button class="button button-bike" onclick="location.href='bike.html'">
+        <img src="images/bike.svg" alt="Bike Icon" class="icon">
+        <div class="text">Bike</div>
+    </button>
+</div>
+
+</body>
+</html>
